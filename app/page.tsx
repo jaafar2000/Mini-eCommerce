@@ -38,7 +38,7 @@ export default function Home() {
     category === "all" ? products : products.filter((p) => p.category === category);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-start bg-zinc-50 dark:bg-black py-16 px-6 font-sans">
+    <div className="flex min-h-screen flex-col items-center justify-start bg-zinc-50 dark:bg-black py-16 px-6 font-sans ">
       <h1 className="text-4xl font-bold text-black dark:text-zinc-50 mb-10">
         Product Catalog
       </h1>
@@ -50,7 +50,7 @@ export default function Home() {
       />
       <CategoryFilter categories={categories} active={category} onChange={setCategory} />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl">
         {filtered.map((p) => (
           <ProductCard key={p.id} product={p} onDelete={handleDelete} />
         ))}

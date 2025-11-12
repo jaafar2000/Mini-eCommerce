@@ -5,6 +5,6 @@ export const products = pgTable("products", {
   name: text("name").notNull(),
   price: numeric("price", { precision: 10, scale: 2 }).notNull(),
   category: text("category").notNull(),
-  inStock: boolean("in_stock").default(true),
+  in_stock: boolean("in_stock").default(true),
   createdAt: timestamp("created_at").defaultNow(),
 });

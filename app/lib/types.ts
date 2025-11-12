@@ -3,5 +3,5 @@ export type Product = {
   name: string;
   price: number;
   category: string;
-  in_stock?: boolean;
+  in_stock: boolean;
 };

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { Product } from "../lib/types";
 type Props = {
@@ -6,9 +6,11 @@ type Props = {
   onDelete: (id: number) => void;
 };
 
+
 export default function ProductCard({ product, onDelete }: Props) {
+    console.log(product)
   return (
-    <div className="rounded-lg border border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900 transition hover:shadow-md flex flex-col justify-between">
+    <div className="rounded-lg border  border-zinc-200 dark:border-zinc-700 p-4 bg-white dark:bg-zinc-900 transition hover:shadow-md flex flex-col justify-between  animate-fadeIn">
       <div>
         <h2 className="text-lg font-semibold text-black dark:text-zinc-50">
           {product.name}
@@ -17,7 +19,13 @@ export default function ProductCard({ product, onDelete }: Props) {
           {product.category} — ${product.price}
         </p>
       </div>
-
+      <p
+        className={`text-sm mt-1 ${
+          product.in_stock ? "text-green-600" : "text-red-500"
+        }`}
+      >
+        {product.in_stock ? "In Stock" : "Out of Stock"}
+      </p>
       <button
         onClick={() => {
           if (confirm(`Delete "${product.name}"?`)) onDelete(product.id);
