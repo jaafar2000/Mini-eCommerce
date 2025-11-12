@@ -70,3 +70,12 @@ It’s designed as a lightweight production-ready architecture following modern 
   "category": "Electronics",
   "in_stock": true
 }
+```
+## Live Demo
+
+The project is deployed and running live here:  
+**[live demo](https://task-tawny-nu-85.vercel.app/)**  
+
+(Deployed on **Vercel** due to temporary AWS technical restrictions.  
+The code remains fully compatible with AWS EC2, RDS, and S3.)
+
